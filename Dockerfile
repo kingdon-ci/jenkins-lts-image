@@ -8,4 +8,5 @@ RUN jenkins-plugin-cli --plugins \
 	github-oauth \
 	command-launcher \
 	jdk-tool \
+	job-dsl \
 	strict-crumb-issuer
