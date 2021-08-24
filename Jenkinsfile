@@ -54,6 +54,9 @@ pipeline {
       }
     }
     stage('Push Tag') {
+      when {
+        branch 'main'
+      }
       steps {
         container('docker') {
           withCredentials([[$class: 'UsernamePasswordMultiBinding',
