@@ -25,7 +25,7 @@ pipeline {
           }
           sh """\
           #!/bin/sh
-          export DOCKER_REPO_USER DOCKER_REPO_PASSWORD
+          export DOCKER_REPO_USER="${dockerRepoUser}"
           export DOCKER_REPO_HOST="${dockerRepoHost}"
           export DOCKER_REPO_PROJ="${dockerRepoProj}"
           export GIT_COMMIT="${gitCommit}"
