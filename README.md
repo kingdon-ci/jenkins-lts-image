@@ -7,3 +7,10 @@ Keeping with the advice from [jenkinsci/helm-charts](https://github.com/jenkinsc
 This configuration is preferable to installing plugins at run-time as the plugin server could be down, or plugin installations might fail and reverting to an earlier version or referring to what version was automatically installed might become necessary at some time. Moreover, a straightforward mechanism for promoting plugin updates that does not require anyone to edit YAML by hand, or accept any pull requests from something like  Renovate Bot.
 
 This repo is minimally configured to be able to build current images for Jenkins on a schedule, with a tag format that is compatible with Flux v2's Image Update Automation. For more info on [sortable image tags](https://fluxcd.io/docs/guides/sortable-image-tags/), read through [Automated image updates to Git](https://fluxcd.io/docs/guides/image-update/) in the [Flux Documentation](https://fluxcd.io/docs/) on [fluxcd.io](https://fluxcd.io/)!
+
+New images are meant to be built by hand at least whenever the upstream version
+is bumped.
+
+For example:
+
+* [bump lts to 2.303.1 - #443](https://github.com/jenkinsci/helm-charts/pull/443)
