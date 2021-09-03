@@ -23,6 +23,6 @@ GIT_COMMIT_SHORT=$(echo $GIT_COMMIT|cut -c1-8)
 
 IMAGE_TAG=${DOCKER_REPO_HOST}/${DOCKER_REPO_USER}/${DOCKER_REPO_PROJ}:${GIT_COMMIT_SHORT}
 
-docker build -t ${IMAGE_TAG} .
+docker build --no-cache -t ${IMAGE_TAG} .
 
-# make build IMAGE_TAG=${IMAGE_TAG}
+# make bust-cache IMAGE_TAG=${IMAGE_TAG}
