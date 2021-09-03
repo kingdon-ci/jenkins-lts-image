@@ -7,6 +7,10 @@ IMAGE_TAG := kingdonb/jenkins:$(TAG)
 build:
 	docker build . -t $(IMAGE_TAG)
 
+.PHONY: bust-cache
+bust-cache:
+	docker build --no-cache . -t $(IMAGE_TAG)
+
 .PHONY: push
 push: build
 	docker push $(IMAGE_TAG)
